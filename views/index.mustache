@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+        <h1>TODO LIST</h1>
+
+    <div class="todo">
+    <form class="search-form" action="/" method="post">
+
+        <input class="searchtool" placeholder="Add a todo..." type="text" name="todo" value="">
+
+        <input class="button" type="submit" name="submit" value="Add todo">
+    </div>
+    </form>
+
+
+        <h2>Tasks to do:</h2>
+
+        <form class="" action="/completed" method="post">
+          <div class="todo">
+        {{#todos}}
+        <button type="submit" name="button" value="{{.}}"> complete </button>
+        <span>{{.}}</span> <br>
+        {{/todos}}
+      </div>
+      </form>
+
+        <div class="Complete">
+        <h2>Completed tasks:</h2>
+        {{#completed}}
+        <h3>{{.}}</h3>
+        {{/completed}}
+        </div>
+    </div>
+  </body>
+</html>

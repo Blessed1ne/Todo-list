@@ -10,11 +10,34 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(expressValidator())
 
 
+const todos = [
+  "Wash the car",
+  "Learn French",
+  "Learn to play guitar",
+  "Get pilot license"
+];
+
+const completed = [
+
+];
 
 app.get("/", function(req, res) {
   res.render("index", {
+    todos: todos,
+    completed: completed
+  });
+});
+
+app.post("/", function(req, res) {
+  todos.push(req.body.todo);
+  res.redirect("/")
   })
-})
+
+app.post("/completed", function(req, res) {
+    completed.push(req.body.button);
+    res.redirect("/")
+    })
+
 
 app.listen(3000, function() {
   console.log("Listening on 3000")

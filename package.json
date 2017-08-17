@@ -1,7 +1,6 @@
 {
   "name": "todo_list",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +12,15 @@
     "express": "^4.15.4",
     "express-validator": "^3.2.1",
     "mustache-express": "^1.2.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blessed1ne/Todo-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Blessed1ne/Todo-list/issues"
+  },
+  "homepage": "https://github.com/Blessed1ne/Todo-list#readme",
+  "description": ""
 }
