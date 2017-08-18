@@ -34,7 +34,10 @@ app.post("/", function(req, res) {
   })
 
 app.post("/completed", function(req, res) {
-    completed.push(req.body.button);
+
+  let remove = req.body.button
+  todos.splice(todos.indexOf(remove), 1)
+    completed.push(remove);
     res.redirect("/")
     })
 
